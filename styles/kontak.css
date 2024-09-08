@@ -1,0 +1,166 @@
+.section-1 .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 20px;
+    background-color: rgb(204, 226, 224);
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+}
+
+.location > iframe {
+    width: 96%;
+    height: 250px;
+}
+
+.location > a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    font-weight: 700;
+}
+
+.location > p {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.sosmed {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(187, 213, 213);
+    padding: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;    
+}
+
+.sosmed > a {
+    background-color: rgb(208, 230, 224);
+    padding: 8px 30px;
+    gap: 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    color: black;
+    align-items: center;
+    transition: .5s;
+    width: 280px;
+}
+
+.sosmed > a:hover {
+    background-color: rgb(191, 186, 186);
+    color: #000000
+    ;
+}
+
+.sosmed > a > i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+.section-2 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-2 {
+    background-color: #e7e9e2;
+}
+
+
+form {
+    background-color: rgb(204, 226, 224);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.input-text {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.name , .subjek, .email, .telpon{
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    width: 100%;
+}
+
+.pesan {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+form > button {
+    width: 200px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    transition: 0.5s;
+}
+
+form > button:hover {
+    background-color: black;
+    color: white;
+}
+
+
+@media (min-width: 768px) {
+
+    .section-1 .container {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .location {
+        width: 48%;
+    }
+
+    .sosmed {
+        width: 48%;
+    }
+
+    .location, .sosmed {
+        height: 400px;
+    }
+
+    .name, .subjek {
+        width: 49%;
+    }
+}

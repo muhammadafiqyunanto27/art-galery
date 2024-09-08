@@ -1,0 +1,801 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+/* swiper */
+.unggulan {
+    margin-top: 2rem;
+}
+
+.unggulan .box, .box {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.unggulan .box img {
+    background-color: #adc678;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.unggulan .box > p {
+    padding: 0px 35px 20px;
+}
+
+.unggulan .box .content , .content{
+    position: absolute;
+    top: -100%;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background: hsla(0, 0%, 91%, 0.826);
+    overflow: hidden;
+    padding: 20px;
+}
+
+.unggulan .box:hover .content , .box:hover .content{
+    top: 0;
+    transition: 0.5s;
+    padding: 20px;
+}
+
+header > h3 {
+    font-family: 'Beach Lombok', sans-serif;
+    color: rgb(70, 46, 9);
+}
+
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+
+
+p {
+    font-size: 20px;
+}
+
+hr {
+    border: 1px solid black;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    padding: 20px 20px;
+}
+
+/* custom scroll bar */
+
+html::-webkit-scrollbar {
+    width: 0.5rem;
+}
+html::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+html::-webkit-scrollbar-track {
+    background: black;
+    border-radius: 5rem;
+}
+
+i {
+    cursor: pointer;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    transition:  0.1s;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .3s;
+}
+
+header.shadow{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color:#c7c7c7cb
+}
+
+header > a {
+    width: 60px;
+}
+
+header > a > img {
+    width: 100%;
+}
+
+header .navbar {
+    position: absolute;
+    width: 240px;
+    height: 100vh;
+    top: 100%;
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    background-color:#c7c7c7cb;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 29px 0px;
+    transition: 0.3s linear;
+    text-align: left;
+    justify-content: left;
+    align-items: self-start;
+}
+
+header .navbar.active {
+    right: 0;
+}
+
+.navbar a {
+    position: relative;
+    top: 20px;
+    color: black;
+    width: 100%;
+    padding: 10px 10px 10px 30px;
+}
+
+.navbar a:hover ,#active{
+    color: rgb(255, 255, 255);
+    background-color: black;
+}
+
+.header-icons > i{
+    font-size: 30px;
+}
+
+header > .search {
+    position: absolute;
+    top: -100%;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    left: 20%;
+    padding: 15px 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    transition: .2s;
+    background-color:#c6c6c68f;
+}
+
+header .search.active {
+    top: 100%;
+}
+
+header .search #search {
+    padding: 8px 15px;
+    border-radius: 10px;
+}
+
+.hero {
+    padding: 20px;
+    background-image: url(./bg4.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    text-align: center;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .3s;
+}
+
+.hero .container h1 {
+    font-family: "Nerko One", cursive;
+    color: rgb(70, 46, 9);
+    font-size: 70px;
+}
+
+.hero .container p {
+    font-size: 22px;
+    font-family: "Baskervville SC", serif;
+    color: rgb(70, 46, 9);
+}
+
+.section-1 {
+    padding: 20px;
+}
+
+.section-1 > h2 {
+    padding: 20px 30px;
+    text-align: center;
+    color: rgb(70, 46, 9);
+    
+}
+
+.section-1 > h2 > span {
+    font-family: "Nerko One", cursive;
+    font-size: 40px;
+}
+
+.section-2 .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    background-color: #e7e9e2;
+    padding-top: 40px;
+    padding-bottom: 70px;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .3s;
+}
+
+.wrap-card-sect-2 ,
+.wrap-card-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.card-sect-2, .card-sect-3 {
+    padding: 25px;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .3s;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    background-color: #ffffff;
+}
+
+.img-card-2 > img ,
+.img-card-3 > img {
+    width: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.img-card-2, .img-card-3 {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.judul-sect-2, .judul-sect-3, .judul-sect-5 {
+    color: rgb(70, 46, 9);
+}
+
+.judul-sect-2 > h1 > span ,
+.judul-sect-3 > h1 > span {
+    font-family: "Nerko One", cursive;
+    font-size: 35px;
+    color: rgb(70, 46, 9);
+}
+
+.text-card-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.text-card-2 h2 {
+    padding-right: 20px;
+}
+
+.text-card-2 > p {
+    font-size: 20px;
+}
+
+.section-3 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.judul-sect-3 > h1 {
+    text-align: center;
+    padding: 10px;
+    color: rgb(70, 46, 9);
+}
+
+.section-4 {
+    background-color: #e3e9d6;
+}
+
+.section-4 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+    background-color: #e3e9d6;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.section-4 .container > a {
+    padding: 20px 25px;
+    color: black;
+    background-color: #bdc2b2;
+    transition: .5s;
+}
+
+.section-4 .container > a:hover {
+    padding: 20px 25px;
+    color: black;
+    background-color: #dfe9be;
+}
+
+.judul-sect-4 > h1{
+    font-family: 'Beach Lombok', sans-serif;
+    color: rgb(70, 46, 9);
+}
+
+.wrap-card-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.card-4 {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.text-card-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.button-a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-a > a {
+    padding: 15px 20px;
+    background-color: #adc678;
+    color: black;
+    transition: .5s linear;
+}
+
+.button-a > a:hover {
+    padding: 15px 20px;
+    background-color: #adb59d;
+    color: black;;
+}
+
+.section-5 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    gap: 50px;
+    background-color: #d5dbcc;
+}
+.section-5 {
+    background-color: #d5dbcc;
+}
+
+.judul-sect-5 {
+    padding: 10px 50px;
+}
+
+.wrap-card-sect-5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.wrap-card-sect-5 > .swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.section-5 .container > p {
+    padding: 20px 50px;
+    background-color: #adb59d;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #cdcfc9;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    gap: 30px;
+}
+
+.footer-box:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 10px 50px;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+}
+
+.footer-box .judul-footer-box {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-box .judul-footer-box > img {
+    width: 20%;
+}
+
+.footer-box .judul-footer-box > h1 {
+    font-family: 'Beach Lombok', sans-serif;
+    color: rgb(70, 46, 9);
+}
+
+.social a .bx {
+    font-size: 24px;
+    color: black;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.social a .bx:hover {
+    background-color: #e1d2d2;
+}
+
+.footer-box:nth-child(2) {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.lokasi {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
+    padding: 30px 20px;
+    align-items: center;
+}
+
+.lokasi > iframe {
+    width: 100%;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+
+    header > .search {
+        left: 38%;
+    }
+
+    .wrap-card-sect-2 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .card-sect-2 {
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+
+    .img-card-2 {
+        width: 100%;
+    }
+
+    .wrap-card-3 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px,auto));
+        gap: 1rem;
+        margin-top: 2rem;
+        align-items: flex-start;
+    }
+
+    .card-sect-3 {
+        width: 100%;
+    }
+
+    .card-sect-3:nth-child(4) {
+        position: relative;
+        bottom: 50px;
+    }
+
+    .wrap-card-4 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card-4 {
+        width: 45%;
+    }
+
+    .wrap-card-sect-5 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .wrap-card-sect-5 > .swiper-slide {
+        width: 80%;
+    }
+    
+    .footer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        padding: 40px 20px;
+    }
+
+    .footer-box:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        gap: 10px;
+        justify-content: center;
+        position: relative;
+    }
+
+    .judul-footer-box > h1 {
+        font-size: 20px;
+    }
+
+    .footer-box > p {
+        font-size: 18px;
+    }
+
+    .footer-box {
+        width: 30%;
+        padding: 0px;
+    }
+
+    .lokasi {
+        width: 30%;
+        padding: 0px;
+    }
+
+    .lokasi > iframe {
+        height: 150px;
+    }
+
+    .lokasi > h4 {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    header > .search {
+        left: 41%;
+    }
+
+    .card-sect-2 {
+        width: 47%;
+    }
+
+    .wrap-card-3 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card-sect-3 {
+        width: 30%;
+        height: 550px;
+    }
+
+    .card-sect-3:nth-child(4) {
+        bottom: 0;
+    }
+
+    .card-4 {
+        width: 20%;
+    }
+
+    .section-5 .container {
+        padding-bottom: 0px;
+    }
+
+    .wrap-card-sect-5 {
+        align-items: flex-start;
+    }
+
+    .wrap-card-sect-5 > .swiper-slide {
+        width: 47%;
+    }
+
+    .wrap-card-sect-5 > .swiper-slide:nth-child(3) {
+        position: relative;
+        bottom: 96px;
+    }
+
+    .wrap-card-sect-5 > .swiper-slide:nth-child(5) {
+        position: relative;
+        bottom: 110px;
+    }
+
+    .wrap-card-sect-5 > .swiper-slide:nth-child(7) {
+        position: relative;
+        bottom: 110px;
+    }
+
+    .wrap-card-sect-5 > .swiper-slide:nth-child(8) {
+        position: relative;
+        bottom: 100px;
+    }
+    .wrap-card-sect-5 > .swiper-slide:nth-child(9) {
+        position: relative;
+        bottom: 110px;
+    }
+    .wrap-card-sect-5 > .swiper-slide:nth-child(10) {
+        position: relative;
+        bottom: 170px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ANIMATION CSS */
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
